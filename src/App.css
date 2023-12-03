@@ -1,47 +1,58 @@
-.App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.addTask {
-  height: 30vh;
-  background-color: dodgerblue;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.list {
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  flex-direction: column;
-}
+/* Task.css */
 
 .task {
-  width: 500px;
-  height: 50px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 2rem;
   display: flex;
-  margin: 15px;
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  width: 75vw;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.task h1 {
+  margin: 0;
 }
 
 .task button {
-  width: auto;
-  height: 20px;
-  margin-left: 5px;
-  text-align: center;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: background-color 0.5s ease;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+}
+
+.task button:hover {
+  background-color: #2980b9;
+}
+
+.task.completed {
+  background-color: #00aa4f;
+  /* Green for completed tasks */
+}
+
+.task.completed button {
+  background-color: #00aa4f;
+}
+
+.task.completed button:hover {
+  background-color: #00aa4f;
 }

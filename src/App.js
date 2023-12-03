@@ -27,7 +27,7 @@ function App() {
     setTodoList(
       todoList.map((task) => {
         if (task.id === id) {
-          return { ...task, completed: true };
+          return { ...task, completed: !task.completed };
         } else {
           return task;
         }
@@ -38,21 +38,22 @@ function App() {
   return (
     <div className="App">
       <div className="addTask">
-        <input onChange={handleChange} />
-        <button onClick={addTask}> Add Task</button>
+        <input onChange={ handleChange } />
+        <button onClick={ addTask }> Add Task</button>
       </div>
       <div className="list">
-        {todoList.map((task) => {
+        { todoList.map((task) => {
           return (
             <Task
-              taskName={task.taskName}
-              id={task.id}
-              completed={task.completed}
-              deleteTask={deleteTask}
-              completeTask={completeTask}
+              key={ task.id }
+              taskName={ task.taskName }
+              id={ task.id }
+              completed={ task.completed }
+              deleteTask={ deleteTask }
+              completeTask={ completeTask }
             />
           );
-        })}
+        }) }
       </div>
     </div>
   );
